@@ -1,0 +1,191 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+:root {
+  --bg: #000000;
+  --bg-card: #0e1218;
+  --text: #f1f1f1;
+  --img-profile: #8257e5;
+  --buttons: #fff;
+  --border-button: #1a1a1a;
+}
+
+body {
+  background-color: var(--bg-card);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: 'Prompt', sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9.125rem;
+}
+
+p.title {
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+p.text {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+#cardWrapper {
+  position: relative;
+}
+
+#card {
+  width: 25.4375rem;
+  height: 40.25rem;
+
+  border-top: 1.5rem solid var(--bg);
+  border-bottom: 1.5rem solid var(--bg);
+
+  border-left: 1rem solid var(--bg);
+  border-right: 1rem solid var(--bg);
+
+  border-radius: 3.125rem;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  padding: 2rem;
+
+  overflow: hidden;
+}
+
+#card .header {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+#card .header div {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: solid 1px #c4c4c4;
+  border-radius: 100%;
+  padding: 0.8rem;
+}
+
+#card .body {
+  width: 23.125rem;
+  height: 23.125rem;
+  border: solid 0.625rem #8257e5;
+  border-radius: 30rem;
+  margin-left: 2rem;
+  overflow: hidden;
+}
+
+#card .footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+#card .footer p {
+  margin-bottom: 0;
+}
+
+#card .footer div {
+  width: 1.8rem;
+  margin-bottom: -0.5rem;
+}
+
+.absoluteCard {
+  position: absolute;
+  background: linear-gradient(180deg, #000000 3.65%, rgba(70, 69, 69, 0.72) 53.65%, rgba(62, 56, 56, 0.42) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.25rem;
+  padding: 2rem;
+  border-radius: 3.125rem;
+
+  bottom: 18%;
+  left: 10%;
+}
+
+.absoluteCard > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5625rem;
+}
+
+.absoluteCard > div img {
+  width: 1rem;
+}
+
+#username {
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
+button,
+input {
+  background: var(--bg);
+  border: 2px solid var(--border-button);
+  border-radius: 1rem;
+  color: var(--text);
+  padding: 1rem 3rem;
+
+  transition: 0.4s;
+  cursor: pointer;
+
+  outline: none;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+#customization {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 830px) {
+  main {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  #card {
+    width: 20.75rem;
+  }
+}
